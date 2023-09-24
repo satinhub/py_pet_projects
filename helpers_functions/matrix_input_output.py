@@ -6,10 +6,10 @@ def input_matrix(row_col):
     return matrix
 
 
-def print_matrix(matrix, row_col, space=2):
+def print_matrix(matrix, row_col):
     for r in range(row_col[0]):
         for c in range(row_col[1]):
-            print(str(matrix[r][c]).ljust(space), end=' ')
+            print(str(matrix[r][c]).ljust(2), end=' ')
         print()
 
 
