@@ -1,18 +1,18 @@
-def input_matrix(row_col):
+def input_matrix(row, col):
     matrix = []
-    for r in range(row_col[0]):
-        row = list(map(int, input().split()))
-        matrix.append(row)
+    for r in range(row):
+        temp = list(map(int, input().split()))
+        matrix.append(temp)
     return matrix
 
 
-def print_matrix(matrix, row_col):
-    for r in range(row_col[0]):
-        for c in range(row_col[1]):
+def print_matrix(matrix, row, col):
+    for r in range(row):
+        for c in range(col):
             print(str(matrix[r][c]).ljust(2), end=' ')
         print()
 
 
-row_col = list(map(int, input().split()))
-matrix = input_matrix(row_col)
-print_matrix(matrix, row_col)
+row, col = [int(i) for i in input().split()]
+matrix = input_matrix(row, col)
+print_matrix(matrix, row, col)
