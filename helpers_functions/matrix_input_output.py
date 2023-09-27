@@ -3,7 +3,7 @@ def input_matrix(row):
 
 
 def print_matrix(matrix, row):
-    [print(matrix[i]) for i in range(row)]
+    [print(*matrix[i]) for i in range(row)]
 
 
 row, col = [int(i) for i in input().split()]
