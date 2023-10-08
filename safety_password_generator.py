@@ -1,14 +1,16 @@
 import random
+import string
 
-def generate_password(chars, len):
+
+def generate_password(len):
+    chars = list(
+        '''0123456789!"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ''')
+    random.shuffle(chars)
     password = ''
     for i in range(len):
         password += random.choice(chars)
     return password
 
-chars = list(
-    '0123456789!#$%&*+-=?@^_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
-random.shuffle(chars)
 
 len = int(input('Desired password length: '))
-print(generate_password(chars, len))
+print(generate_password(len))

@@ -17,3 +17,4 @@ row, col = [int(i) for i in input().split()]
 matrix = input_matrix(row)
 print()
 print_matrix(matrix, row)
+print(matrix)
